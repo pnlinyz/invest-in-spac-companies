@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .error {
+        color: red;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@4.8.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "hconcat": [{"mark": "bar", "encoding": {"color": {"type": "nominal", "field": "Type", "scale": {"scheme": "tableau20"}, "title": "IPO Types"}, "opacity": {"condition": {"value": 1, "selection": "selector001"}, "value": 0.2}, "tooltip": {"type": "quantitative", "aggregate": "sum", "field": "IPO count"}, "x": {"type": "quantitative", "field": "Year"}, "y": {"type": "quantitative", "aggregate": "sum", "field": "IPO count", "title": "Number of Transactions"}}, "selection": {"selector001": {"type": "multi", "fields": ["Type"], "bind": "legend"}}, "title": ["US IPO Activity 2003-2021", "Source: SPAC Analytics as of 04/25/2021"]}, {"mark": "bar", "encoding": {"color": {"type": "nominal", "field": "Type", "scale": {"scheme": "tableau20"}, "title": "IPO Types"}, "opacity": {"condition": {"value": 1, "selection": "selector001"}, "value": 0.2}, "tooltip": {"type": "quantitative", "aggregate": "sum", "field": "Proceeds"}, "x": {"type": "quantitative", "field": "Year"}, "y": {"type": "quantitative", "aggregate": "sum", "field": "Proceeds M", "title": "Gross Proceeds(Mil.$)"}}, "selection": {"selector001": {"type": "multi", "fields": ["Type"], "bind": "legend"}}, "title": ["US IPO Activity 2003-2021", "Source: SPAC Analytics as of 04/25/2021"]}], "data": {"name": "data-a13c5ba9b4c6b2f0d7081db9e542a505"}, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json", "datasets": {"data-a13c5ba9b4c6b2f0d7081db9e542a505": [{"Year": 2021, "Type": "SPAC", "IPO count": 308, "Proceeds": 99905000000, "Proceeds M": 99905.0}, {"Year": 2021, "Type": "Traditional IPO", "IPO count": 98, "Proceeds": 55600000000, "Proceeds M": 55600.0}, {"Year": 2020, "Type": "SPAC", "IPO count": 248, "Proceeds": 83353000000, "Proceeds M": 83353.0}, {"Year": 2020, "Type": "Traditional IPO", "IPO count": 202, "Proceeds": 96000000000, "Proceeds M": 96000.0}, {"Year": 2019, "Type": "SPAC", "IPO count": 59, "Proceeds": 13600000000, "Proceeds M": 13600.0}, {"Year": 2019, "Type": "Traditional IPO", "IPO count": 154, "Proceeds": 58600000000, "Proceeds M": 58600.0}, {"Year": 2018, "Type": "SPAC", "IPO count": 46, "Proceeds": 10750000000, "Proceeds M": 10750.0}, {"Year": 2018, "Type": "Traditional IPO", "IPO count": 179, "Proceeds": 53100000000, "Proceeds M": 53100.0}, {"Year": 2017, "Type": "SPAC", "IPO count": 34, "Proceeds": 10048000000, "Proceeds M": 10048.0}, {"Year": 2017, "Type": "Traditional IPO", "IPO count": 155, "Proceeds": 40200000000, "Proceeds M": 40200.0}, {"Year": 2016, "Type": "SPAC", "IPO count": 13, "Proceeds": 3499000000, "Proceeds M": 3499.0}, {"Year": 2016, "Type": "Traditional IPO", "IPO count": 98, "Proceeds": 22300000000, "Proceeds M": 22300.0}, {"Year": 2015, "Type": "SPAC", "IPO count": 20, "Proceeds": 3902000000, "Proceeds M": 3902.0}, {"Year": 2015, "Type": "Traditional IPO", "IPO count": 153, "Proceeds": 35300000000, "Proceeds M": 35300.0}, {"Year": 2014, "Type": "SPAC", "IPO count": 12, "Proceeds": 1750000000, "Proceeds M": 1750.0}, {"Year": 2014, "Type": "Traditional IPO", "IPO count": 246, "Proceeds": 91300000000, "Proceeds M": 91300.0}, {"Year": 2013, "Type": "SPAC", "IPO count": 10, "Proceeds": 1447000000, "Proceeds M": 1447.0}, {"Year": 2013, "Type": "Traditional IPO", "IPO count": 210, "Proceeds": 69300000000, "Proceeds M": 69300.0}, {"Year": 2012, "Type": "SPAC", "IPO count": 9, "Proceeds": 490000000, "Proceeds M": 490.0}, {"Year": 2012, "Type": "Traditional IPO", "IPO count": 138, "Proceeds": 49600000000, "Proceeds M": 49600.0}, {"Year": 2011, "Type": "SPAC", "IPO count": 16, "Proceeds": 1110000000, "Proceeds M": 1110.0}, {"Year": 2011, "Type": "Traditional IPO", "IPO count": 128, "Proceeds": 42100000000, "Proceeds M": 42100.0}, {"Year": 2010, "Type": "SPAC", "IPO count": 7, "Proceeds": 530000000, "Proceeds M": 530.0}, {"Year": 2010, "Type": "Traditional IPO", "IPO count": 159, "Proceeds": 50100000000, "Proceeds M": 50100.0}, {"Year": 2009, "Type": "SPAC", "IPO count": 1, "Proceeds": 36000000, "Proceeds M": 36.0}, {"Year": 2009, "Type": "Traditional IPO", "IPO count": 69, "Proceeds": 21600000000, "Proceeds M": 21600.0}, {"Year": 2008, "Type": "SPAC", "IPO count": 17, "Proceeds": 3842000000, "Proceeds M": 3842.0}, {"Year": 2008, "Type": "Traditional IPO", "IPO count": 30, "Proceeds": 26300000000, "Proceeds M": 26300.0}, {"Year": 2007, "Type": "SPAC", "IPO count": 66, "Proceeds": 12094000000, "Proceeds M": 12094.0}, {"Year": 2007, "Type": "Traditional IPO", "IPO count": 233, "Proceeds": 75100000000, "Proceeds M": 75100.0}, {"Year": 2006, "Type": "SPAC", "IPO count": 37, "Proceeds": 3384000000, "Proceeds M": 3384.0}, {"Year": 2006, "Type": "Traditional IPO", "IPO count": 177, "Proceeds": 52400000000, "Proceeds M": 52400.0}, {"Year": 2005, "Type": "SPAC", "IPO count": 28, "Proceeds": 2113000000, "Proceeds M": 2113.0}, {"Year": 2005, "Type": "Traditional IPO", "IPO count": 224, "Proceeds": 59800000000, "Proceeds M": 59800.0}, {"Year": 2004, "Type": "SPAC", "IPO count": 12, "Proceeds": 485000000, "Proceeds M": 485.0}, {"Year": 2004, "Type": "Traditional IPO", "IPO count": 256, "Proceeds": 72400000000, "Proceeds M": 72400.0}, {"Year": 2003, "Type": "SPAC", "IPO count": 1, "Proceeds": 24000000, "Proceeds M": 24.0}, {"Year": 2003, "Type": "Traditional IPO", "IPO count": 126, "Proceeds": 49900000000, "Proceeds M": 49900.0}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div class="error" style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
